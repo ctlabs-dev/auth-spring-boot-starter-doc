@@ -27,9 +27,9 @@ Seamlessly integrate JWT authentication, user registration, multi-channel verifi
   :::u-button
   ---
   color: neutral
-  icon: simple-icons-github
+  icon: i-simple-icons-github
   size: xl
-  to: https://github.com/your-org/auth-spring-boot-starter
+  to: https://github.com/ctlabs-dev/auth-spring-boot-starter
   variant: outline
   ---
   View on GitHub
@@ -46,10 +46,10 @@ Key Features
   icon: i-heroicons-lock-closed
   ---
   #title
-  JWT Authentication
-  
+  Secure Sessions (JWT)
+
   #description
-  Automatic token generation, validation, and refresh with configurable expiration.
+  Dual-token strategy (Access/Refresh) with automatic revocation and compound tokens for maximum security.
   :::
 
   :::u-page-feature
@@ -57,10 +57,21 @@ Key Features
   icon: i-heroicons-user-plus
   ---
   #title
-  User Registration
-  
+  Granular Security (RBAC)
+
   #description
-  Support for email and phone-based registration with validation.
+  Complete Roles & Permissions scheme dynamically injected into the Spring Security context.
+  :::
+
+  :::u-page-feature
+  ---
+  icon: i-heroicons-language
+  ---
+  #title
+  Bilingual by Design
+
+  #description
+  Native support for notifications and validations in multiple languages out-of-the-box.
   :::
 
   :::u-page-feature
@@ -68,10 +79,21 @@ Key Features
   icon: i-heroicons-device-phone-mobile
   ---
   #title
-  Multi-channel Verification
-  
+  Smart Notifications
+
   #description
-  Email (SMTP), SMS (Twilio), and WhatsApp verification support.
+  Multi-provider support for Email, SMS, and WhatsApp using SMTP, Twilio, and Brevo seamlessly.
+  :::
+
+  :::u-page-feature
+  ---
+  icon: i-heroicons-code-bracket
+  ---
+  #title
+  Developer Friendly
+
+  #description
+  Extensible via Spring Events and JSONB metadata for custom profiles without DB migrations.
   :::
 
   :::u-page-feature
@@ -79,19 +101,19 @@ Key Features
   icon: i-heroicons-circle-stack
   ---
   #title
-  Isolated Database
-  
+  Zero-Config Admin
+
   #description
-  Dedicated Flyway migrations with separate history table.
+  Automatic seed admin user creation with granular permissions on the first run.
   :::
 ::
 
 ::u-page-section
 #title
-Architecture
+Architecture & Design
 
 #description
-The starter follows Spring Boot's auto-configuration principles and integrates cleanly with your existing application.
+Built-in following Spring Boot Autoconfiguration principles and the Diátaxis model for invisible integration and clear documentation.
 
 #features
   :::u-page-feature
@@ -99,10 +121,21 @@ The starter follows Spring Boot's auto-configuration principles and integrates c
   icon: i-heroicons-shield-check
   ---
   #title
-  Security Filter Chain
-  
+  Separation of Concerns
+
   #description
-  Operates with `@Order(1)` for auth endpoints only.
+  Dedicated services: `AuthService` for self-management and `UserManagementService` for privileged administration.
+  :::
+
+  :::u-page-feature
+  ---
+  icon: i-heroicons-swatch
+  ---
+  #title
+  Custom Templates
+
+  #description
+  Easily overwrite default email designs using Thymeleaf templates in your own project.
   :::
 
   :::u-page-feature
@@ -111,8 +144,8 @@ The starter follows Spring Boot's auto-configuration principles and integrates c
   ---
   #title
   Database Isolation
-  
+
   #description
-  Uses separate Flyway history table to avoid conflicts.
+  Automated and isolated DB schema with its own history table to avoid conflicts in your project.
   :::
 ::

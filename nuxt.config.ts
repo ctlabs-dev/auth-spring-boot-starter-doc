@@ -23,7 +23,9 @@ export default defineNuxtConfig({
             'ini',
             'xml',
             'java',
-            'groovy'
+            'groovy',
+            'properties',
+            'sql'
           ]
         }
       }
